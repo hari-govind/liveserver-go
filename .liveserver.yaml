@@ -1,0 +1,7 @@
+ignorePatterns: [".*", "node_modules", "*.swp", "*~"]
+root: /home/user/test # Directory to watch
+depth: 2 # Level of subdirectories to watch
+webserverPort: 8081
+websocketPort: 8082
+listenAddress: 127.0.0.1
+wait: 500
