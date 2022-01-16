@@ -1,15 +1,13 @@
 package main
 
 import (
-	"fmt"
+	"github.com/hari-govind/liveserver-go/server"
 
-	"github.com/hari-govind/liveserver-go/config"
-	"github.com/hari-govind/liveserver-go/watcher"
+	"fmt"
 )
 
 func main() {
-	fmt.Println(config.GetConfig().Depth)
-	for ev := range watcher.Listen() {
-		fmt.Println("Event: ", ev)
-	}
+	fmt.Println("Liveserver")
+	go server.StartWsServer()
+	server.ServeRootDir()
 }
